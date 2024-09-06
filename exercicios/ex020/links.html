@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+
+        /*
+        Seletores personalizados:
+
+        #  = id
+        .  = class
+        :  = pseudo-class
+        :: = pseudo-element
+        >  = cildren
+
+        */
+        body {
+            background-color: #737373;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 2.5em;
+            text-decoration: underline;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: normal;
+            background-color: aliceblue;
+            font-size: 1.5em;
+        }
+
+        a:visited {
+            color: darkred;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        a::after {
+            content: ' [link]';
+            color: rgba(139, 0, 0, 0.534)
+        }
+
+        a::before {
+            content: '> ';
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalissando links</h1>
+    <ul>
+        <li><a href="https://github.com/MateusGdeMelo" target="_blank">Repositório GitHub</a></li>
+        <li><a href="https://www.youtube.com/@mateusgomes9797" target="_blank">Canal do Youtube</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100004018459383" target="_blank">Perfil no Facebook</a></li>
+    </ul>
+</body>
+</html>

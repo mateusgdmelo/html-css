@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+     <img src="imagens/foto-g.png" alt="imagem dinâmica">
+    </picture>
+    <h1>Reproduzindo áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML com a tag &lt;audio&gt;.</p>
+    <audio src="midia/meuaudio.mp3" autoplay controls></audio>
+
+    <p>Agora com o parâmetro &lt;source&gt; dentro da tag &lt;audio&gt;.
+    </p>
+    <audio controls loop preload autoplay>
+        <source src="midia/meuaudio.mp3" type="audio/mpeg">
+        <source src="midia/meuaudio.ogg" type="audio/ogg">
+        <source src="midia/meuaudio.wav" type="audio/wav">
+        
+        <!-- As extensões .ogg e .wav também podem ser utilizadas em sites, no entanto a recomendação é que se utilize apenas as extensões .mp3 e .ogg uma vez que a extensão .wav é geralmente muito pesada.-->
+
+        <!--Atributos da tag <audio>:
+            outoplay
+            controls 
+            loop
+            preload="metadata", "auto" e "none"
+            -->
+
+    </audio> 
+
+    <h1>VEJA!</h1>
+</body>
+</html>

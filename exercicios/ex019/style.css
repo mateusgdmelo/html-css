@@ -1,0 +1,40 @@
+@charset "UTF_8";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+n  
+/*
+Em HTML um 'id' corresponde a um '#' em CSS. (só pode 1 elemento).
+Em HTML um 'class' corresponde a um '.' em CSS. (pode vários elementos).
+*/
+
+body {
+    background-color: #737373;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1#titulo {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-family: garamond;
+    text-align: center;
+}
+
+.subtitulo {
+    font-weight: 700;
+}
+
+.topico {
+    font-weight: normal;
+}
+
+p {
+    text-align: justify;
+    text-indent: 30px;
+}

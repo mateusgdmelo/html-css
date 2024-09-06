@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+body {
+    background-color: #737373;
+}
+
+div#header {
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(133, 65, 16);
+    height: 200px;
+}
+
+div#produtos {
+    border: 3px solid black;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(6, 6, 124);
+}
+
+div#header:hover {
+    background-color: white;
+}
+
+div#produtos:hover {
+    background-color: white;
+}

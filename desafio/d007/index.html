@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem flexível</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Imagem Flexível</h1>
+    <p>Você está vendo uma imagem completa? Experimente ampliar o tamanho da sua janela para ter uma melhor experiência. &#x1F62E</p>
+    <picture>
+        <source srcset="imagens/paisagem-400.jpg" media="(max-width: 850px)">
+        <source media="(max-width: 1250px)" srcset="imagens/paisagem-800.jpg">
+        <img src="imagens/paisagem-full.jpg" alt="Um menino sentado, observando o horizonte" type="image/jpeg">
+    </picture>
+    
+</body>
+</html>
