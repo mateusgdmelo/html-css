@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas</title>
     <style>
-        table {
+        table#tabela1 {
             width: 400px;
             border-collapse: collapse;
+            margin-bottom: 50px;
         }
 
         td {
@@ -18,6 +19,15 @@
             background-color: #737373;
         }
 
+        table#tabela2 {
+            height: 400px;
+            width: 400px;
+        }
+
+        tr.linha2 {
+            vertical-align: top;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -30,7 +40,7 @@
                     Table data = dado da tabela <td>
                     
                     -->
-    <table>
+    <table id="tabela1">
         <tr>
             <td>A1</td>
             <td>B1</td>
@@ -60,5 +70,27 @@
         </tr>
     </table>
 
+    <table id="tabela2">
+        <tr class="linha2">
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr class="linha2">
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr class="linha2">
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr class="linha2">
+            <td>A4</td>
+            <td>B4</td>
+            <td>C4</td>
+        </tr>
+    </table>
 </body>
 </html>
