@@ -7,10 +7,34 @@
 </head>
 <body>
     <h1>Meus primeiros formulários</h1>
-    <form>
-        <p>Nome: <input type="text" name="nome" id="nome"></p>
-        <p> Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
-        <p><input type="submit" value="Enviar"></p>
+    <form autocomplete="off" action="cadastro.php" method="post">
+
+        <!-- A propriedade autocomplete com o valor "OFF" desabilita a funcionalidade de autopreenchimento do formulário. 
+         
+        A propriedade action exerce a funcionalidade de enviar os dados do formulário para uma linguagem de programação. No caso acima nos enviamos os dados do formulário para a linguagem PHP. Porém podemos enviar para qualquer outra linguagem de programação, como JavaScript, etc. OS dados serão enviados quando clicarmos no botão de "submit". 
+        
+        Métodos de envio de formulários: 
+        Existem dois métodos em HTML para envio de formulários. Para especificalos usamos a propiedade method="". Podemos usar os valores:
+        
+        GET -> (Método padão): os dados ficam explicitos na URL do navegador. Obs.: Só é possível enviar até 3mil bits, ou seja, 3mil letras.
+
+        POST -> Os dados não ficam visivelmente explicitos na URL. Mas os dados não são criptografados, eles podem ser encontrados por meio do DevTools (DevTools/Network/name/Headers ou Payload). Para que esses dados sejam criptografados é preciso usar o protocolo HTTPS. 
+        Obs.: Post é usado para enviar dados sensíveis, como senhas, dados de cartão de crédito e imagens. -->
+
+        <p>
+            <label for="inome">Nome: </label>
+            <input type="text" name="nome" id="inome">
+        </p>
+        <p>
+            <label for="isobrenome">Sobrenome: </label>
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+
+        <!-- Quando criamos um formulário precisamos criar também uma etiqueta, ou rótulo, para a descrição do nosso formulário a fim de relacionar o conteúdo do formulário com a descrição. Para isso usamos a tag <label>. -->
+
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
     </form>
     
 </body>
