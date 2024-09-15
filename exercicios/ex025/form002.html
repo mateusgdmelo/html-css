@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusuario">Usuário: </label>
+            <input type="text" name="usuario" id="iusuario" required minlength="5" maxlength="15" placeholder="Nome do usuário" autocomplete="username">
+
+            <!-- Para tornar o campo obrigatório use o "required" assim como no input:password. 
+            
+            O tamanha máximo e mínimo pode ser especificado pela propriedade "minlength" e "maxlength"
+            
+            Use a propriedade "placeholder" para indicar ao usuário o que ele precisa fazer. 
+            
+            Use a propriedade "Size" para especificar a quantidade de caracteres que a caixa irá exibir. 
+            
+            Também é possível usar o "autocomplete" dentro dos inputs para esclarecer ao navegador do que se trata aquela caixa-->
+
+        </p>
+        <p>
+            <label for="isenha">Senha: </label>
+            <input type="password" name="senha" id="isenha" required minlength="8" maxlength="20" placeholder="Máx 8 caractéres" autocomplete="current-password">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+
+            <!--Para limpar os dados das caixas de texto use "input:reset".-->
+
+        </p>
+    </form>
+</body>
+</html>
