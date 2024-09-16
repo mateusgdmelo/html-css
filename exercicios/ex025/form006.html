@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <form action="cadastro.php" method="get">
+        <P>
+            <label for="icor">Cor: </label>
+            <input type="color" name="cor" id="icor" value="#737373">
+            <!-- Para criar um input que receba uma cor use input:color. -->
+        </P>
+        <p>
+            <label for="inivel">Nível de satisfação: </label>
+            <input type="range" name="nivel" id="inivel" min="0" max="10" value="7">
+            <!-- Para criar um input que seja uma faixa de nivel use input:range. 
+             
+            Por padrão a faixa de nível varia de 0 a 100. Mas podemos configurar essa caracteristica através das propriedades "max" e "min". Podemos ainda especificar um ponto onde ela deve iniciar através de "value"-->
+        </p>
+        <p>
+            <label for="ifoto">Foto do perfil: </label>
+            <input type="file" name="foto" id="ifoto">
+            <!-- Para criar um input que selecione uma foto use input:file. 
+             
+            Não esqueça que nesse caso o "method" para <form> precisa ser "POST". -->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
