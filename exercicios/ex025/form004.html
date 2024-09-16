@@ -9,6 +9,10 @@
     <h1>Meus formulários</h1>
     <form action="cadastro.php" method="get" autocomplete="on">
         <fieldset>
+            <!--A tag <fieldset> cria um agrupamento. Nela podemos agrupar os nossos formulários para uma melhor divisão visual.
+            
+            Podemos também criar uma legenda para cada agrupamento através da tag <legend>.-->
+
             <legend>Dados pessoais</legend>
             <p>
                 <label for="inome">Nome: </label>
@@ -17,19 +21,21 @@
             <p>
                 <label for="iemail">Email: </label>
                 <input type="email" name="email" id="iemail" required autocomplete="email">
+                <!-- Para criar um input que recebe um e-mail use "input:email"-->
             </p>
             <p>
                 <label for="itel">Telefone: </label>
                 <input type="tel" name="tel" id="itel" required autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx) x xxxx-xxxx">
-                <!--Estudar mais sobre expressões regulares (RegEx).
+                <!-- Para criar um input que recebe número de telefone use "input:tel" 
+                
+                Estudar mais sobre expressões regulares (RegEx).
             
                 Em html podemos usar uma expressão regular através da propriedade "pattern" [padrão].
             
-                Toda expressão regular começa com um "^" e termina com um "$".
-            
-                -->
+                Toda expressão regular começa com um "^" e termina com um "$". -->
             </p>
         </fieldset>
+
         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
