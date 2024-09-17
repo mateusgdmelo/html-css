@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php">
+        <!-- Agora através de um <output> vamos aprender um pouco sobre JavaScrip.-->
+        <p>
+            <label for="1inumero">1º número: </label>
+            <input type="number" name="1numero" id="inumero1" min="0" max="50" required oninput="isoma.innerHTML = Number(inumero1.value) + Number(inumero2.value)">
+        </p>
+        <!-- Atrvés da propriedade "oninput" podemos criar uma pequena linguagem de programação que será exibida na tag de formulário para saída: o <output>. -->
+        <p>
+            <label for="2inumero">2º número: </label>
+            <input type="number" name="2numero" id="inumero2" min="0" max="50" required oninput="isoma.innerHTML = Number(inumero1.value) + Number(inumero2.value)">
+        </p>
+        <p>
+            <label for="isoma">Soma: </label>
+            <output name="soma" id="isoma">0</output>
+            <!-- A tag <output> é uma tag de formulário para saída de dados. -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
