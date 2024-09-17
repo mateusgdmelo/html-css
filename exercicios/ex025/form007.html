@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <!-- Agora vamos trablhar com outros elementos de formulário diferentes de input como a tag <select>, a tag <datalist> e a tag <-  -  ->.   -->
+    <form action="cadastro.php">
+        <p>
+            <label for="iestado">Estado: </label>
+            <select name="estado" id="iestado">
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernabuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+
+            <!-- Para criar um formulário em lista não flexível use a tag <select> para criar a lista e a tag <option> para criar os elementos da lista. A tag <optgroup> é usada para agrupar os elementos <option>. -->
+        </p>
+
+        <p>
+            <label for="iprofissao">Profissão: </label>
+            <input type="text" name="profissao" id="iprofissao" list="lsprofissao">
+            <datalist id="lsprofissao">
+                <option value="ADM">Administrador</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+            </datalist>
+            <!-- Para criar um formulário em lista flexível use a tag input:text combinada com a tag <datalist>. 
+            Para criar uma relação entre as duas tags é necessário adicionar um "id" à tag <datalist>, e adicionar a propriedade "list" à tag <input>, tanto o valor para o id como o valor para o list devemm ser iguais para efetivar a relação entre as tags. 
+            Também é possível adicionar <option> dentro da tag <datalist> para poder criar opções para a lista. -->
+        </p>
+
+        <p>
+            <label for="imensagem">Mensagem</label><br>
+            <textarea name="mensagem" id="imensagem" rows="10" cols="30"></textarea>
+            <!-- Para criar um formulário que seja um campo para escrever uma mensagem use a tag <textarea>. As propriedades "cols" e "rows" especificam as colunas e as linhas respectivamente. O tamanho da mensagem não é limitado por essas propriedades, podemos mandar a mensagem no tamanho que quisermos. -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
