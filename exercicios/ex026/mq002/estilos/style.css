@@ -12,6 +12,12 @@ html, body {
     height: 100vh;
 }
 
+h1 {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 10vh;
+}
+
 body {
     background-color: #233eff ;
     background-repeat: no-repeat;
