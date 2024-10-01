@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+
+        div.conteiner {
+            background-color: lightblue;
+            display: flex;
+            border: 1px solid black;
+            flex-direction: row;
+        }
+
+        div#wrap {
+            flex-wrap: wrap;
+        }
+
+        div#wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+
+        div.conteiner-column {
+            background-color: lightblue;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        div.item {
+            background-color: lightgoldenrodyellow;
+            border: 1px solid black;
+            margin: 5px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Flex-wrap</h1>
+    <h2>"Flex-wrap: nowrap;"</h2>
+    <p>Por padrão ao configurar o "dispaly: flex" a propriedade "nowrap" já vem configurada. Dessa forma não haverá quebra de linha e os itens sempre vão se ajustar ao conteiner pai. <br> Exemplo: </p>
+    <div class="conteiner">
+        <div class="item">Exemplo de bloco: A</div>
+        <div class="item">Exemplo de bloco: B</div>
+        <div class="item">Exemplo de bloco: C</div>
+        <div class="item">Exemplo de bloco: D</div>
+        <div class="item">Exemplo de bloco: E</div>
+        <div class="item">Exemplo de bloco: F</div>
+        <div class="item">Exemplo de bloco: G</div>
+    </div>
+    <h2>"Flex-wrap: wrap;"</h2>
+    <p>Porém, a propriedade "flex-wrap: wrap" vai permitir a quebra de linha no sentido da cross-axis. <br> Como no exemplo a seguir: </p>
+    <div class="conteiner" id="wrap">
+        <div class="item">Exemplo de bloco: A</div>
+        <div class="item">Exemplo de bloco: B</div>
+        <div class="item">Exemplo de bloco: C</div>
+        <div class="item">Exemplo de bloco: D</div>
+        <div class="item">Exemplo de bloco: E</div>
+        <div class="item">Exemplo de bloco: F</div>
+        <div class="item">Exemplo de bloco: G</div>
+    </div>
+    <h2>"Flex-wrap: wrap-reverse;"</h2>
+    <p>Com a propriedade "flex-wrap: wrap-reverse" configurada a quebra de linha no sentido contrário da cross-axis, isto é, de trás para frente. <br> Como no exemplo a seguir: </p>
+    <div class="conteiner" id="wrap-reverse">
+        <div class="item">Exemplo de bloco: A</div>
+        <div class="item">Exemplo de bloco: B</div>
+        <div class="item">Exemplo de bloco: C</div>
+        <div class="item">Exemplo de bloco: D</div>
+        <div class="item">Exemplo de bloco: E</div>
+        <div class="item">Exemplo de bloco: F</div>
+        <div class="item">Exemplo de bloco: G</div>
+    </div>
+    <h1>Wrap pra o "flex-directon: column"</h1>
+    <h2>Wrap:</h2>
+    <div class="conteiner-column" id="wrap">
+        <div class="item">Exemplo de bloco: A</div>
+        <div class="item">Exemplo de bloco: B</div>
+        <div class="item">Exemplo de bloco: C</div>
+        <div class="item">Exemplo de bloco: D</div>
+        <div class="item">Exemplo de bloco: E</div>
+        <div class="item">Exemplo de bloco: F</div>
+        <div class="item">Exemplo de bloco: G</div>
+    </div>
+    <h2>wrap-reverse:</h2>
+    <div class="conteiner-column" id="wrap-reverse">
+        <div class="item">Exemplo de bloco: A</div>
+        <div class="item">Exemplo de bloco: B</div>
+        <div class="item">Exemplo de bloco: C</div>
+        <div class="item">Exemplo de bloco: D</div>
+        <div class="item">Exemplo de bloco: E</div>
+        <div class="item">Exemplo de bloco: F</div>
+        <div class="item">Exemplo de bloco: G</div>
+    </div>
+</body>
+</html>
