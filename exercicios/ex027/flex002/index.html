@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+
+        div.conteiner {
+            background-color: lightblue;
+            display: flex;
+            border: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        div#row {
+            flex-direction: row;
+        }
+
+        div#row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        div#column {
+            flex-direction: column;
+        }
+
+        div#column-reverse {
+            flex-direction: column-reverse;
+        }
+
+        div.item {
+            background-color: lightgoldenrodyellow;
+            border: 1px solid black;
+            margin: 5px;
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Flexbox (ou Flexible Box Layout) é um modelo de layout introduzido no CSS3 que facilita o alinhamento, distribuição e espaçamento de elementos dentro de um contêiner, permitindo um design mais flexível e responsivo. O Flexbox é especialmente útil para layouts unidimensionais, ou seja, para alinhar itens em linha (horizontais) ou em coluna (verticais). -->
+    <h1>Direções e Eixos:</h1>
+    <h2>"Flex-direction: row;"</h2>
+    <p>Por padrão a configuração da direção e do eixo de um conteiner "pai" será sempre em linha "row" da esquerda para direta. Os itens são alinhados da esquerda para direita em uma linha horizontal. <br> Como no exemplo a seguir:</p>
+    <div class="conteiner" id="row"> <!-- Somente o conteiner "pai" recebe a configuração "display: flex"-->
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <h2>"Flex-direction: row-reverse;"</h2>
+    <p>Ao configurar um "row-reverse" a direção e os eixos continuam sendo em linha "row", porém da direita para esuqerda, isto é, de trás para frente. Os itens são alinhados da direita para esquerda em uma linha horizontal. <br> Como no exemplo a seguir:</p>
+    <div class="conteiner" id="row-reverse">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <h2>"Flex-direction: column;"</h2>
+    <p>Ao configurar o "column" os itens ficam alinhados em uma coluna vertical de cima para baixo. <br> Como no exemplo a seguir:</p>
+    <div class="conteiner" id="column">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <h2>"Flex-direction: column-reverse;"</h2>
+    <p>Ao configurar o "column-reverse" os itens continuam alinhados em uma coluna vertical, porém de baixo para cima. <br> Como no exemplo a seguir:</p>
+    <div class="conteiner" id="column-reverse">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>
