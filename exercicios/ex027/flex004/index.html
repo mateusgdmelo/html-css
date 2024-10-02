@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            background-color: lightgreen;
+            border: 1px solid black;
+            justify-content: flex-start;
+            margin: 10px;
+        }
+
+        div.conteiner-column {
+            display: flex;
+            background-color: lightgreen;
+            border: 1px solid black;
+            justify-content: flex-start;
+            margin: 10px;
+            flex-direction: column;
+            height: 250px;
+        }
+
+        div.conteiner-cross-axis {
+            display: flex;
+            background-color: lightgreen;
+            border: 1px solid black;
+            width: 250px;
+            height: 300px;
+        }
+
+        div.item {
+            margin: 5px;
+            padding: 15px 1px;
+            text-align: center;
+            background-color: lightgoldenrodyellow;
+            border: 1px dashed black;
+        }
+
+        div#flex-end {
+            justify-content: flex-end;
+        }
+
+        div#center {
+            justify-content: center;
+        }
+
+        div#space-between {
+            justify-content: space-between;
+        }
+
+        div#space-evenly {
+            justify-content: space-evenly;
+        }
+
+        div#space-around {
+            justify-content: space-around;
+        }
+
+        div#cross-axis-flex-start {
+            align-items: flex-start;
+        }
+
+        div#cross-axis-flex-end {
+            align-items: flex-end;
+        }
+
+        div#cross-axis-center {
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alinhamento nos eixos</h1>
+    <h2>Em relação ao main axis</h2>
+    <h3>"justify-content: flex-start"</h3>
+    <p> Em relação ao main axis, os itens serão alinhados com o main-start. <br> Exemplo: </p>
+    <div class="conteiner">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+        <div class="item">Item D</div>
+        <div class="item">Item E</div>
+        <div class="item">Item F</div>
+        <div class="item">Item G</div>
+    </div>
+    <div class="conteiner-column">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+    </div>
+    <h3>"justify-content: flex-end"</h3>
+    <p> Em relação ao main axis, os itens serão alinhados com o main-end. <br> Exemplo: </p>
+    <div class="conteiner" id="flex-end">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+        <div class="item">Item D</div>
+        <div class="item">Item E</div>
+        <div class="item">Item F</div>
+        <div class="item">Item G</div>
+    </div>
+    <div class="conteiner-column" id="flex-end">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+    </div>
+    <h3>"justify-content: center"</h3>
+    <p> Os itens serão alinhados no centro do main axis, isto é, no meio do conteiner. Os espaços em branco ficarão nas bordas. <br> Exemplo: </p>
+    <div class="conteiner" id="center">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+        <div class="item">Item D</div>
+        <div class="item">Item E</div>
+        <div class="item">Item F</div>
+        <div class="item">Item G</div>
+    </div>
+    <div class="conteiner-column" id="center">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+    </div>
+    <h3>"justify-content: space-between"</h3>
+    <p> O primero item será alinhado com o main-start, o segundo item será alinhado com a main-end, os demais itens ficarão distribuídos proporcionalmente dentro do container. <br> Exemplo: </p>
+    <div class="conteiner" id="space-between">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+        <div class="item">Item D</div>
+        <div class="item">Item E</div>
+        <div class="item">Item F</div>
+        <div class="item">Item G</div>
+    </div>
+    <div class="conteiner-column" id="space-between">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+    </div>
+    <h3>"justify-content: space-evenly"</h3>
+    <p> O space-evenly distribui o mesmo espaço em branco para os itens do conteiner. De modo que entre um item e outro haja um tamanho proporcional de espaços vazios. <br> Exemplo: </p>
+    <div class="conteiner" id="space-evenly">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+        <div class="item">Item D</div>
+        <div class="item">Item E</div>
+        <div class="item">Item F</div>
+        <div class="item">Item G</div>
+    </div>
+    <div class="conteiner-column" id="space-evenly">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+    </div>
+    <h3>"justify-content: space-around"</h3>
+    <p> O space-around divide todo espaço do conteiner de forma proporcional de acordo com o número de itens e alinha os itens no meio dessas divisões de espaço. <br> Exemplo: </p>
+    <div class="conteiner" id="space-around">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+        <div class="item">Item D</div>
+        <div class="item">Item E</div>
+        <div class="item">Item F</div>
+        <div class="item">Item G</div>
+    </div>
+    <div class="conteiner-column" id="space-around">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+    </div>
+    <h1>Alinhamento nos eixos</h1>
+    <h2>Em relação ao cross-axis:</h2>
+    <h3>align-items: stretch</h3>
+    <p>Por padrão a propriedade "stretch" já vem configurada no align-itens. Ela estica os itens ao máximo para caber na altura do conteiner. <br> Exemplo: </p>
+    <div class="conteiner-cross-axis">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+    </div>
+    <h3>align-items: flex-start</h3>
+    <p>Em relação ao cross-axis, a configuração flex-start alinha os itens ao cross-start. <br> Exemplo: </p>
+    <div class="conteiner-cross-axis" id="cross-axis-flex-start">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+    </div>
+    <h3>align-items: flex-end</h3>
+    <p>Em relação ao cross-axis, a configuração flex-end alinha os itens ao cross-and. <br> Exemplo: </p>
+    <div class="conteiner-cross-axis" id="cross-axis-flex-end">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+    </div>
+    <h3>align-items: center</h3>
+    <p>Em relação ao cross-axis, a configuração center alinha os itens ao centro do cross-axis, isto é, no meio do conteiner. <br> Exemplo: </p>
+    <div class="conteiner-cross-axis" id="cross-axis-center">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+    </div>
+</body>
+</html>
