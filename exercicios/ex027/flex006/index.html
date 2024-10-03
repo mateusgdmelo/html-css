@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            background-color: lightsalmon;
+            border: 1px solid black;
+            height: 300px;
+            flex-flow: row wrap;
+            align-content: stretch;
+        }
+
+        div#flex-start {
+            align-content: flex-start;
+        }
+
+        div#flex-end {
+            align-content: flex-end;
+        }
+
+        div#center {
+            align-content: center;
+        }
+
+        div#space-between {
+            align-content: space-between;
+        }
+
+        div#space-evenly {
+            align-content: space-evenly;
+        }
+
+        div#space-around {
+            align-content: space-around;
+        }
+
+        div.item {
+            background-color:lightgreen;
+            border: 1px solid black;
+            padding: 15px 1px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alinhamento de conteúdo empacotado</h1>
+    <p> O alinhamento de conteúdo empacotado "align-content" refere-se ao alinhamento do conteúdo no sentido do croos-axis apenas queando os itens tem o valor "wrap" especificado, isto é, apenas quando os itens estão empacotados. </p>
+    <h2>"Align-content: stretch;"</h2>
+    <p> Por padrão o a align-content tem o valor "stretch" especificado. Ele divide o height em partes iguais e estica os itens para caber em toda essa área dividida proporcionalmente. No caso abaixo, o height foi dividido em dois porque há apenas duas linhas de itens, mas poderiam ser três linhas ou mais, a divisão seria a mesma. <br>
+    Obs.: Lembre-se que nesse caso o nosso conteiner tem o valor "wrap" específicado. <br>
+    Exemplo:</p>
+    <div class="conteiner">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+        <div class="item">Item D</div>
+        <div class="item">Item E</div>
+        <div class="item">Item F</div>
+        <div class="item">Item G</div>
+        <div class="item">Item H</div>
+        <div class="item">Item I</div>
+        <div class="item">Item J</div>
+        <div class="item">Item K</div>
+        <div class="item">Item L</div>
+        <div class="item">Item M</div>
+    </div>
+
+    <h2>"Align-content: flex-start;"</h2>
+    <p> O Align-content: flex-start alinha os itens ao coss-start. Essa propriedade não faz com que os itens sejam esticados. <br>
+    Exemplo:</p>
+    <div class="conteiner" id="flex-start">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+        <div class="item">Item D</div>
+        <div class="item">Item E</div>
+        <div class="item">Item F</div>
+        <div class="item">Item G</div>
+        <div class="item">Item H</div>
+        <div class="item">Item I</div>
+        <div class="item">Item J</div>
+        <div class="item">Item K</div>
+        <div class="item">Item L</div>
+        <div class="item">Item M</div>
+    </div>
+
+    <h2>"Align-content: flex-end;"</h2>
+    <p> O Align-content: flex-end alinha os itens ao coss-end. Essa propriedade também não faz com que os itens sejam esticados. <br>
+    Exemplo:</p>
+    <div class="conteiner" id="flex-end">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+        <div class="item">Item D</div>
+        <div class="item">Item E</div>
+        <div class="item">Item F</div>
+        <div class="item">Item G</div>
+        <div class="item">Item H</div>
+        <div class="item">Item I</div>
+        <div class="item">Item J</div>
+        <div class="item">Item K</div>
+        <div class="item">Item L</div>
+        <div class="item">Item M</div>
+    </div>
+
+    <h2>"Align-content: center;"</h2>
+    <p> O Align-content: center faz com que os itens fiquem alinhados ao centro do cross-axis. Os espaços vazios ficam no cross-start e no cross-end. Essa propriedade também não faz com que os itens sejam esticados. <br>
+    Exemplo:</p>
+    <div class="conteiner" id="center">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+        <div class="item">Item D</div>
+        <div class="item">Item E</div>
+        <div class="item">Item F</div>
+        <div class="item">Item G</div>
+        <div class="item">Item H</div>
+        <div class="item">Item I</div>
+        <div class="item">Item J</div>
+        <div class="item">Item K</div>
+        <div class="item">Item L</div>
+        <div class="item">Item M</div>
+    </div>
+
+    <h2>"Align-content: space-between;"</h2>
+    <p> O Align-content: space-between divide os itens entre o croos-start e o cross-axis. O espaço vazio fica no meio do cross-axis.<br>
+    Exemplo:</p>
+    <div class="conteiner" id="space-between">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+        <div class="item">Item D</div>
+        <div class="item">Item E</div>
+        <div class="item">Item F</div>
+        <div class="item">Item G</div>
+        <div class="item">Item H</div>
+        <div class="item">Item I</div>
+        <div class="item">Item J</div>
+        <div class="item">Item K</div>
+        <div class="item">Item L</div>
+        <div class="item">Item M</div>
+    </div>
+
+    <h2>"Align-content: space-evenly;"</h2>
+    <p> O Align-content: space-evenly especifica a mesma divisão de espaços vazios entre os itens. Até mesmo entre o cross-start e o cross-end e um item. <br>
+    Exemplo:</p>
+    <div class="conteiner" id="space-evenly">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+        <div class="item">Item D</div>
+        <div class="item">Item E</div>
+        <div class="item">Item F</div>
+        <div class="item">Item G</div>
+        <div class="item">Item H</div>
+        <div class="item">Item I</div>
+        <div class="item">Item J</div>
+        <div class="item">Item K</div>
+        <div class="item">Item L</div>
+        <div class="item">Item M</div>
+    </div>
+
+    <h2>"Align-content: space-around;"</h2>
+    <p> O Align-content: space-around  tem o mesmo comportamento do stretch. Ele divide o espaço no sentido do cross-axis de acordo com o número de linhas dos itens. Mas o space around alinha os elementos no meio dessas divisões. <br>
+    Exemplo:</p>
+    <div class="conteiner" id="space-around">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+        <div class="item">Item D</div>
+        <div class="item">Item E</div>
+        <div class="item">Item F</div>
+        <div class="item">Item G</div>
+        <div class="item">Item H</div>
+        <div class="item">Item I</div>
+        <div class="item">Item J</div>
+        <div class="item">Item K</div>
+        <div class="item">Item L</div>
+        <div class="item">Item M</div>
+    </div>
+</body>
+</html>
