@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlexBox </title>
+    <title>Flex-item </title>
+    <style>
+        div.conteiner {
+            display: flex;
+            background-color: lightblue;
+            border: 1px solid black;
+        }
+
+        div.item {
+            background-color: lightgoldenrodyellow;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+        }
+
+        div#order1 {
+            order: -2;
+        }
+
+        div#order2 {
+            order: 5;
+        }
+
+        div#order3 {
+            order: 0;
+        }
+
+        div#order4 {
+            order: 9;
+        }
+
+        div#order5 {
+            order: -3;
+        }
+
+        div#order6 {
+            order: 1;
+        }
+
+        div#order7 {
+            order: 10;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Flex Item</h1>
+    <h2>Order</h2>
+    <p>Por padrão todo item dentro de um conteiner flexível vem com a propriedade order configurada para 0 (zero). </p>
+     <div class="conteiner">
+        <div class="item" id="order1">Item A</div>
+        <div class="item" id="order2">Item B</div>
+        <div class="item" id="order3">Item C</div>
+        <div class="item" id="order4">Item D</div>
+        <div class="item" id="order5">Item E</div>
+        <div class="item" id="order6">Item F</div>
+        <div class="item" id="order7">Item G</div>
+     </div>
 </body>
 </html>
