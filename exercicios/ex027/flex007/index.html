@@ -11,6 +11,14 @@
             border: 1px solid black;
         }
 
+        div.conteiner-align {
+            display: flex;
+            background-color: lightblue;
+            border: 1px solid black;
+            height: 300px;
+            align-items: flex-start;
+        }
+
         div.item {
             background-color: lightgoldenrodyellow;
             padding: 10px;
@@ -45,12 +53,43 @@
         div#order7 {
             order: 10;
         }
+
+        div#align-A {
+            align-self: auto;
+        }
+
+        div#align-B {
+            align-self: flex-start;
+        }
+
+        div#align-C {
+            align-self: flex-end;
+        }
+
+        div#align-D {
+            align-self: center;
+        }
+
+        div#align-E {
+            align-self: stretch;
+        }
     </style>
 </head>
 <body>
     <h1>Flex Item</h1>
-    <h2>Order</h2>
+    <h2>Propriedade "Order"</h2>
     <p>Por padrão todo item dentro de um conteiner flexível vem com a propriedade order configurada para 0 (zero). </p>
+    <div class="conteiner">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+        <div class="item">Item D</div>
+        <div class="item">Item E</div>
+        <div class="item">Item F</div>
+        <div class="item">Item G</div>
+     </div>
+     <p>Mas você pode especificar valores para a propriedade order para poder ordenar os elementos a sua maneira. Eles sempre serão lidos em ordem crescente. <br>
+        Exemplo:</p>
      <div class="conteiner">
         <div class="item" id="order1">Item A</div>
         <div class="item" id="order2">Item B</div>
@@ -59,6 +98,25 @@
         <div class="item" id="order5">Item E</div>
         <div class="item" id="order6">Item F</div>
         <div class="item" id="order7">Item G</div>
+     </div>
+     <h2>Propriedade "align-self"</h2>
+     <p>A propriedade align-self vai alinhar os itens de acordo com o eixo cross-axis e para isso temos 5 valores:</p>
+     <h3>"align-self: auto;"</h3>
+     <p>O "align-self: auto" erda a propriedade do conteiner pai (item A). </p>
+     <h3>"align-self: flex-start;"</h3>
+     <p>O "align-self: flex-start" alinha o item ao coss-start (item B). </p>
+     <h3>"align-self: flex-end;"</h3>
+     <p>O "align-self: flex-end" alinha o item ao coss-end (item C). </p>
+     <h3>"align-self: center;"</h3>
+     <p>O "align-self: center" alinha o item ao centro do cross-axis. (item D). </p>
+     <h3>"align-self: stretch;"</h3>
+     <p>O "align-self: stretch" estica o item para caber em todo height do conteiner pai. (item E). <br> Exemplos: </p>
+     <div class="conteiner-align">
+        <div class="item" id="align-A">Item A</div>
+        <div class="item" id="align-B">Item B</div>
+        <div class="item" id="align-C">Item C</div>
+        <div class="item" id="align-D">Item D</div>
+        <div class="item" id="align-E">Item E</div>
      </div>
 </body>
 </html>
