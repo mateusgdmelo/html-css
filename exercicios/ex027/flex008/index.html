@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            background-color: lightblue;
+            border: 1px solid black;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightgoldenrodyellow;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+        }
+        
+        div#flex1 {
+            flex-basis: 200px;
+        }
+
+        div#flex2 {
+            flex-basis: 200px;
+        }
+
+        div#flex3 {
+            flex-basis: 200px;
+        }
+
+        div#flex4 {
+            flex-basis: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tamanho base dos itens</h1>
+    <h2>Flex-basis</h2>
+    <p>Utilizamos a propriedade "flex-basis" para controlar o tamanho dos itens de um conteiner.</p>
+    <p>Por padrão a propriedade flex-basis sempre vem com o valor "auto" especificado. Isso significa que o tamanho dos itens é ditada de acordo com o tamanho do seu conteudo. Vamos usar conteúdos com diferentes tamanhos no exemplo abaixo.</p>
+    <p>Obs.: Para o exemplo abaixo usamos "flex-flow: row nowrap" para o conteiner. </p>
+    <div class="conteiner">
+        <div class="item">Item AAAAA</div>
+        <div class="item">Item B</div>
+        <div class="item">Item CC</div>
+        <div class="item">Item D</div>
+        <div class="item">Item EEEEEE</div>
+        <div class="item">Item F</div>
+        <div class="item">Item GGGG</div>
+     </div>
+     <h2>Flex-basis: 200px</h2>
+     <p>Ao utilizarmos um valor para flex-basis como o de 200px por exemplo, todos os itens do conteiner terão esse tamanho.</p>
+     <p>Obs.: Lembre-se que, apesar do valor do item estar especificado como 200px, ele pode diminuir para se adaptar se o conteiner pai diminuir. </p>
+     <div class="conteiner">
+        <div class="item" id="flex1">Item A</div>
+        <div class="item" id="flex2">Item B</div>
+        <div class="item" id="flex3">Item C</div>
+        <div class="item" id="flex4">Item D</div>
+     </div>
+</body>
+</html>
