@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex itens</title>
+    <style>
+        div#conteiner {
+            display: flex;
+            background-color: lightgreen;
+            padding: 5px;
+        }
+
+        div.itens {
+            background-color: lightseagreen;
+            padding: 15px;
+            margin: 5px;
+            border: 1px solid black;
+        }
+
+        div#cxA {
+            flex: 1 0 150px;
+        }
+
+        div#cxB {
+            flex: 0 0 150px;
+        }
+
+        div#cxC {
+            flex: 1 0 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simplificando as declarações</h1>
+    <p>Através da propriedade "flex" podemos simplificar as três declarações "flex-shrink", "flex-grow" e "flex-basis".</p>
+    <p>Item A = flex: 1 0 150px; <br> Item B = flex: 0 0 150px; <br> Item C = flex: 1 0 150px; </p>
+    <div id="conteiner">
+        <div class="itens" id="cxA">Item A</div>
+        <div class="itens" id="cxB">Item B</div>
+        <div class="itens" id="cxC">Item C</div>
+    </div>
+    <p>Obs.: É uma orientação da W3c que a propriedade simplificadora "flex" seja utilizada preferencialmente no lugar das três declarações.</p>
+    <h1>Outras simplificações:</h1>
+    <p>flex: 0 1 auto => flex: initial </p>
+    <p>flex: 0 0 auto => flex: none</p>
+    <p>flex: 1 1 auto => flex: auto</p>
+    
+</body>
+</html>
