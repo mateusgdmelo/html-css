@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Item</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            background-color: lightblue;
+            border: 1px solid black;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightgoldenrodyellow;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+        }
+
+        div.itens {
+            background-color: lightgoldenrodyellow;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+            flex-shrink: 0;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Os itens podem aumentar e diminuir de tamanho?</h1>
+    <p>Resposta: Sim! Para isso configuramos as propriedades "flex-shrink" e "flex-grow". </p>
+    <p>Por padrão essas propriedades já vem com valores especificados. Para o "flex-shrink" o padrão é "1", para o "flex-grow" o padrão é "0". </p>
+    <p>"Flex-shrink: 1" significa que os itens podem diminuir de tamanho. <br> "Flex-grow: 0" significa que os itens não podem aumentar de tamanho. </p>
+    <p>Exemplo:</p>
+    <div class="conteiner">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+        <div class="item">Item D</div>
+        <div class="item">Item E</div>
+        <div class="item">Item F</div>
+        <div class="item">Item G</div>
+     </div>
+     <p>Vamos alterar os valores de "flex-shrink" e "flex-grow" para: "flex-shrink: 0" e "flex-grow: 1". Isto é, agora os itens podem aumentar de tamnaho mas não podem encolher. <br> Perceba que o item G está vazando para fora do conteiner, isso acontecer porque a propriedade "nowrap" está especificada e o "flex-shrink" é "0", ou seja, não pode encolher. </p>
+    <div class="conteiner">
+        <div class="itens">Item A</div>
+        <div class="itens">Item B</div>
+        <div class="itens">Item C</div>
+        <div class="itens">Item D</div>
+        <div class="itens">Item E</div>
+        <div class="itens">Item F</div>
+        <div class="itens">Item G</div>
+     </div>
+</body>
+</html>

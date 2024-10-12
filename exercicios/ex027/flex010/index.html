@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Item</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            background-color: lightblue;
+            border: 1px solid black;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightgoldenrodyellow;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+            flex-basis: 150px;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+
+        div#cxA {
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+
+        div#cxB {
+            flex-grow: 2;
+            flex-shrink: 0;
+        }
+
+        div#cxC {
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+
+        div#cxD {
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+
+        div#cxE {
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+
+        div#cxF {
+            flex-grow: 2;
+            flex-shrink: 0;
+        }
+
+        div#cxG {
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+
+        div#cxH {
+            flex-grow: 4;
+            flex-shrink: 0;
+        }
+
+        div#cxI {
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flex-basis + flex-grow + flex-shrink</h1>
+    <p>Vamos fazer alguns testes com essas rtês propriedades em conjunto:</p>
+    <p>"flex-basis: 150px" <br> "flex-grow:0" <br> "flex-shrink: 1" </p>
+    <div class="conteiner">
+        <div class="item">Item A</div>
+        <div class="item">Item B</div>
+        <div class="item">Item C</div>
+     </div>
+     <p>Agora: <br> "flex-basis: 150px" <br> "flex-grow: 1" <br> "flex-shrink: 0" </p>
+     <div class="conteiner">
+        <div class="item" id="cxA">Item A</div>
+        <div class="item" id="cxB">Item B</div>
+        <div class="item" id="cxC">Item C</div>
+     </div>
+     <p>Agora: <br> "flex-basis: 150px" <br> "flex-grow: 2" <br> "flex-shrink: 0" </p>
+     <div class="conteiner">
+        <div class="item" id="cxD">Item D</div>
+        <div class="item" id="cxE">Item E</div>
+        <div class="item" id="cxF">Item F</div>
+     </div>
+     <p>Agora: <br> "flex-basis: 150px" <br> "flex-grow: 4" <br> "flex-shrink: 0" </p>
+     <div class="conteiner">
+        <div class="item" id="cxG">Item G</div>
+        <div class="item" id="cxH">Item H</div>
+        <div class="item" id="cxI">Item I</div>
+     </div>
+</body>
+</html>
