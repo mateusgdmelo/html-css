@@ -10,12 +10,12 @@ header {
     background-color: #737373;
     padding: 10px;
     display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
 }
 
 header h1 {
-    display: inline;
     width: 200px;
     color: white;
     text-shadow: 1px 1px 2px black;
@@ -23,9 +23,6 @@ header h1 {
 
 nav {
     display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    width: calc(100% - 200px);
 }
 
 nav a {
@@ -40,6 +37,7 @@ nav a {
 a:hover {
     background-color: white;
     color: black;
+    transition: background-color .5s;
 }
 
 main {
