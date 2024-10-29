@@ -14,10 +14,14 @@
 h1, h2 {
     font-family: var(--font-titulo);
     margin-bottom: 10px;
+    text-align: center;
 }
 
 p {
     font-family: var(--font-paragrafo);
+    line-height: 1.5em;
+    text-align: justify;
+    text-indent: 30px;
 }
 
 header {
@@ -33,20 +37,31 @@ main {
 section.media-flex {
     padding: 10px;
     display: flex;
+    justify-content: space-around;
+    align-content: center;
 }
 
-section#encima {
-    flex-wrap: wrap;
-    flex-direction: column-reverse
+section#media-text {
+    flex-wrap: wrap-reverse;
 }
 
-section#embaixo {
+section#text-media {
     flex-wrap: wrap;
-    flex-direction: column;
 }
 
 aside, article {
-    border: 1px dashed black;
+    flex-basis: 500px;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+iframe {
+    width: 95%;
+    display: block;
+    margin: auto;
 }
 
 section#normal {
